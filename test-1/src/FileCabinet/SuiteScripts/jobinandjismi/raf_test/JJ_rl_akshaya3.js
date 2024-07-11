@@ -48,7 +48,7 @@ define(['N/record', 'N/redirect', 'N/render', 'N/runtime', 'N/ui/message', 'N/fi
         function Entity(docNumber) {
             var customRecord = record.load({
                 type: record.Type.CUSTOM_RECORD_TYPE,
-                id: 'custrecord_jj_course1',
+                id: 'customrecord_jj_akshays_institute',
                 filters: [
                     ['documentnumber', 'is', docNumber]
                 ]
@@ -56,12 +56,14 @@ define(['N/record', 'N/redirect', 'N/render', 'N/runtime', 'N/ui/message', 'N/fi
             return customRecord;
         }
 
+
+
         function generatePdf(entity) {
             var pdf = pdf.create();
-            pdf.addPage();
-            pdf.addText(entity.getValue('fieldname'));
+            // pdf.addPage();
+            pdf.addText(entity.getValue('custrecord_jj_name1'));
             var file = pdf.saveToFile({
-                filename: 'SuiteScripts',
+                filename: -15,
                 folder: 1695
             });
             return file.url;
