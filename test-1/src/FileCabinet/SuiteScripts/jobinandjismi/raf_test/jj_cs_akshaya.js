@@ -39,13 +39,13 @@ function(log, record) {
         let currentRecord = scriptContext.currentRecord;
         let course = currentRecord.getValue('custrecord_jj_language1');
 
-                // let itemRecord = Record.load({
+                // let Record = Record.load({
                 //     type:  record.Type.CUSTOM_RECORD_TYPE,
                 //     id: customrecord_jj_feerecord1,
                 //     isDynamic: false
                 // });
 
-                // let VALUE = itemRecord.getValue({
+                // let VALUE = Record.getValue({
                 //     fieldId: 'custrecord_jj_fee'
                 // });
             
